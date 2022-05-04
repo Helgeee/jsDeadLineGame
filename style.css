@@ -1,33 +1,73 @@
 .game{
-    width: 600px;
-    height: 200px;
+    width: 1300px;
+    height: 400px;
     border-bottom: 1px solid #000;
     margin: auto;
 }
-#dino{
+#human{
     width: 50px;
-    width: 50px;
-    background-image: url(img/dino.png);
+    height: 50px;
+    background-image: url(img/human.png);
     background-size: 50px 50px;
     position: relative;
-    top: 150px;
-    left: 100;
+    top: 350px;
+    left: 400px;
+} 
+
+#slenderman{
+    width: 50px;
+    height: 50px;
+    background-image: url(img/slenderman.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 210px;
+    left: 0px;
+    animation: slenderManMov 10s infinite linear;
 }
+
 #cactus{
     width: 20px;
     height: 40px;
     background-image: url(img/cactus.png);
     background-size: 20px 40px;
     position: relative;
-    top: 110;
-    left: 580;
-    animation: cactusMov 1s infinite linear;
+    top: 300px;
+    left: 1280px;
+    animation: cactusMov 4s infinite linear;
 }
+
+#portal1{
+    width: 50px;
+    height: 50px;
+    background-image: url(img/Portal1.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 250px;
+    left: -40px;
+}
+
+#portal2{
+    width: 50px;
+    height: 50px;
+    background-image: url(img/Portal2.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px; 
+    left: 1300px;
+} 
+
+@keyframes slenderManMov{
+    0%{
+        left:  20px;
+    }100%{  
+        left: 60px;
+    }
+}
+
 @keyframes cactusMov{
     0%{
-        left:  580px;
-    }
-    100%{
+        left:  1300px;
+    }100%{  
         left: 20px;
     }
 }
@@ -51,4 +91,3 @@
         top: 150px;
     }
 }
-

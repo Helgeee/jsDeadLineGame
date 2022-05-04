@@ -1,4 +1,4 @@
-const dino = document.getElementById("dino");
+const human = document.getElementById("human");
 const cactus =document.getElementById("cactus");
 
 document.addEventListener("keydown", function(event){
@@ -6,18 +6,18 @@ document.addEventListener("keydown", function(event){
 });
 
 function jump (){
-    if(dino.classList!= "jump"){
-        dino.classList.add("jump")
+    if(human.classList!= "jump"){
+        human.classList.add("jump")
     }
     setTimeout(function() {
-        dino.classList.add("jump")
+        human.classList.add("jump")
     },300)
 }
 let isAlive = setInterval(function() {
-    let dinoTop= parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+    let humanTop= parseInt(window.getComputedStyle(human).getPropertyValue("top"));
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-    if (cactusLeft <50 && cactusLeft>0 && dinoTop >=140){
+    if (cactusLeft <50 && cactusLeft>0 && humanTop >=140){
         alert("GAME OVER!")
     }
 },10)
